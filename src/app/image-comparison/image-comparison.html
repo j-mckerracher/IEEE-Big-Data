@@ -1,0 +1,58 @@
+<section id="demo" class="comparison">
+  <div class="comparison__inner">
+    <h2>Compression-Level Demo</h2>
+    <p class="comparison__intro">
+      As the patch-buffer memory budget shrinks, fewer candidate patches survive selection.
+      Classification confidence degrades gracefully until the buffer is starved down to a
+      single-patch SSD baseline, where the prediction can flip entirely.
+    </p>
+
+    <div class="comparison__thumbs">
+      @for (img of images; track img.id) {
+        <button
+          type="button"
+          class="thumb"
+          [class.thumb--active]="img.id === selectedImageId()"
+          (click)="selectImage(img.id)"
+        >
+          <img [src]="img.levels.original.src" [alt]="img.title" />
+          <span>{{ img.title }}</span>
+        </button>
+      }
+    </div>
+
+    <div class="comparison__stage">
+      <div class="comparison__display">
+        <img [src]="currentLevelData().src" [alt]="selectedImage().title + ' at ' + selectedLevel() + ' memory'" />
+      </div>
+
+      <div class="comparison__panel">
+        <div class="comparison__levels">
+          @for (level of levels; track level.id) {
+            <button
+              type="button"
+              class="level-btn"
+              [class.level-btn--active]="level.id === selectedLevel()"
+              (click)="selectLevel(level.id)"
+            >
+              {{ level.label }}
+            </button>
+          }
+        </div>
+
+        <p class="comparison__blurb">
+          {{ levels.find(l => l.id === selectedLevel())?.blurb }}
+        </p>
+
+        <div class="comparison__result" [class.comparison__result--wrong]="!isCorrect()">
+          <span class="comparison__result-label">Prediction</span>
+          <span class="comparison__result-value">{{ currentLevelData().result.label }}</span>
+          <span class="comparison__result-confidence">
+            {{ (currentLevelData().result.confidence * 100) | number: '1.0-0' }}% confidence
+          </span>
+          <span class="comparison__result-truth">Ground truth: {{ selectedImage().groundTruth }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

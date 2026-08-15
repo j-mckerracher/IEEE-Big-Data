@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{amsmath}
+
+
+% Define the command used in your tables
+\newcommand{\name}{STRIDE}
+
+\begin{document}
+
+% --- Table 1 ---
+\begin{table}[htbp]
+\centering
+\caption{\small COCO~\cite{lin2014microsoft, coco_eval} Performance Comparison of Object Detection Methods. \name\ is better in terms of MACs and Params while achieving competitive mAP.}
+\label{tab:COCO_performance_comparison}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Method} & \textbf{MACs} & \textbf{\# of Params} & \textbf{mAP (\%)}\\
+\toprule
+\multicolumn{4}{c}{\textbf{Accurate Bounding Boxes (IoU $>$ 0.75)}} \\
+\cmidrule(lr){1-4}
+Co-DETR~\cite{detr,zong2023detrs} & 88.1 G & 41.48 M & \textbf{67} \\
+EfficientDet-D7~\cite{tan2020efficientdet} & 99.6 G & 64 M & 59.9 \\
+RetinaNet+~\cite{lin2017focal,pytorchvision_retinanet} & \multirow{2}{*}{152.81 G} & \multirow{2}{*}{34.01 M} & \multirow{2}{*}{60.3} \\
+ResNet50 Backbone & & &\\
+FCOS+~\cite{fcos} & \multirow{2}{*}{128.21 G} & \multirow{2}{*}{32.27 M} & \multirow{2}{*}{39.8} \\
+ResNet50 Backbone & & &\\
+\textbf{\name} & \textbf{685.18 M} & \textbf{4.591 M} & 62.79  \\
+(ground truth bounding boxes) &&&\\
+\cmidrule(lr){1-4}
+\multicolumn{4}{c}{\textbf{Moderate Bounding Boxes (0.5 $<$ IoU $<$ 0.75)}} \\
+\cmidrule(lr){1-4}
+Mask R-CNN+~\cite{he2017mask} & \multirow{2}{*}{526 G} & \multirow{2}{*}{97 M} & \multirow{2}{*}{44.9~\cite{dong2022cswin}} \\
+CSwin-B~\cite{dong2022cswin} & & &\\
+FasterRCNN~\cite{ren2015faster}+ & \multirow{2}{*}{1.08 G} & \multirow{2}{*}{19.39 M} &\multirow{2}{*}{22.8~\cite{fasterrcnn}}\\
+MobileNetV3~\cite{mobilenet} & & &\\
+RT-DETRv2S~\cite{rtdetrv2} & 30 G & 20 M &48.1\\
+RT-DETR-R18~\cite{rtdetr} & 30 G & 20 M &46.5\\
+YOLO-v8s~\cite{yolo, yolo_v8} & 14.4 G & 11.16 M & 43.2 \\
+\textbf{\name} & \textbf{685.18 M} & \textbf{4.591 M} & \textbf{57.91}  \\
+(20\% bbox variation) &&&\\
+\cmidrule(lr){1-4}
+\multicolumn{4}{c}{\textbf{Inaccurate Bounding Boxes (IoU $<$ 0.5)}} \\
+\cmidrule(lr){1-4}
+YOLOS~\cite{YOLOS,yolos_tiny} & 7.91 G & 5.65 M & 36.7 \\
+YOLO-v12n~\cite{yolo12} & 3.25 G & 2.6 M & 40.59 \\
+EfficientDet-D0~\cite{tan2020efficientdet} & 3.6 G & 4.1 M & 34.3 \\
+SSD+& \multirow{2}{*}{\textbf{662 M}} & \multirow{2}{*}{\textbf{3.4 M}} & \multirow{2}{*} {25.1~\cite{torchvision_ssd}}\\
+MobileNetV3~\cite{liu2016ssd,mobilenet} &&&\\
+SSD + \name & 685.18 M & 4.591 M & \textbf{40.62} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+% --- Table 2 ---
+\begin{table}[htbp]
+  \centering
+  \caption{ \small PASCAL VOC Performance Comparison of Object Detection Methods. \name is better in terms of MACs and Params while achieving competitive mAP.}
+  \begin{adjustbox}{max width=\columnwidth}
+    \begin{tabular}{lccc}
+      \toprule
+      \textbf{Method} & \textbf{MACs} & \textbf{\# Params} & \textbf{mAP (\%)} \\
+      \midrule
+      \multicolumn{4}{c}{\textbf{Accurate Bounding Boxes (IoU $>$ 0.75)}} \\
+      \cmidrule(lr){1-4}
+      Cascade Mask-RCNN+  & \multirow{3}{*}{686 M} & \multirow{3}{*}{7.7 M} & \multirow{3}{*}{89} \\
+      EfficientNet-B7+& & & \\
+      NAS-FPN ~\cite{tan2019efficientnet,ghiasi2021simple}& & & \\
+      \name & \textbf{685.18 M} & \textbf{4.591 M} & \textbf{93.49} \\
+      \cmidrule(lr){1-4}
+      \multicolumn{4}{c}{\textbf{Moderate Bounding Boxes (0.5 $<$ IoU $<$ 0.75)}} \\
+      \cmidrule(lr){1-4}
+      FasterRCNN+ & \multirow{2}{*}{191.88 G} & \multirow{2}{*}{184.68 M} &\multirow{2}{*}{74.2}\\
+      ResNet-101~\cite{ren2015faster,voc_faster_rcnn} & & &\\
+      \name & \multirow{2}{*}{\textbf{685.18 M}} & \multirow{2}{*}{\textbf{4.591 M}} & \multirow{2}{*}{\textbf{89.3}} \\
+      (20\% bbox var.)& & & \\ 
+      \cmidrule(lr){1-4}
+      \multicolumn{4}{c}{\textbf{Inaccurate Bounding Boxes (IoU $<$ 0.5)}} \\
+      \cmidrule(lr){1-4}
+      SSD + MobileNetv3  & \multirow{2}{*}{\textbf{662 M}} & \multirow{2}{*}{\textbf{3.4 M}} & \multirow{2}{*}{30.7} \\
+      ~\cite{liu2016ssd,mobilenet}(Finetuned) & & & \\
+      SSD + \name (Finetuned) & 685.18 M & 4.591 M & \textbf{56.2} \\
+      \bottomrule
+    \end{tabular}
+  \end{adjustbox}
+  \vspace{-10pt}
+  \label{tab:pascalVoc_performance_comparison}
+\end{table}
+
+\begin{table}
+\centering
+%\captionsetup{font=small}
+\caption{ \small ImageNet~\cite{imagenet} classification performance using \name's Core-Buffer patch strategy, processed by an efficient ViT encoder.  \name achieves a strong accuracy-efficiency trade-off, outperforming comparable models in terms of MACs and parameter usage.}
+%\begin{small}
+\begin{adjustbox}{max width=\columnwidth}{
+\begin{tabular}{lccc}
+\toprule
+\textbf{Method} & \textbf{MACs} & \textbf{Params} & \textbf{Accuracy}\\
+\midrule
+ViT~\cite{dosovitskiy2020image} & 1693 G & 86 M & \textbf{84.8\%}~\cite{steiner2021augreg}\\
+\midrule
+LGViT~\cite{xu2023lgvit} & 10.65 G & 101 M & 80.3\%\\
+AdaptFormer~\cite{chen2022adaptformer} & 1.71 G & 87.6 M & 82.6\%\\
+EfficientViT~\cite{cai2023efficientvit,efficientvit-b2-cls-huggingface} & 2.1 G & 24 M & 82.7\%\\
+EfficientViT-L2~\cite{cai2023efficientvit,efficientvit-l2-cls-huggingface} & 20 G & 64 M & 83.5\%\\
+ConvNeXt-T~\cite{liu2022convnet} & 4.5 G & 27.80 M & 82.1\%\\
+MNv4-Conv-S~\cite{qin2404mobilenetv4} & \textbf{0.2 G} & \textbf{3.4 M} & 73.8\% \\
+MNv4-Hybrid-L~\cite{qin2404mobilenetv4}  & 7.2 G & 11.4 M & 83.4\%\\
+PVT-Tiny~\cite{wang2021pyramid}  & 1.9 G & 12.84 M & 75.1\%~\cite{huggingface_pvt_docs}\\
+MobileViT-v2~\cite{mehta2023separable} &   2.0 G & 10.6 M & 80.4\%  \\
+EfficientFormer-L1~\cite{li2022efficientformer} & 1.42 G & 11.39 M& 80.2\%\\
+EfficientFormer\_v2-L1~\cite{efficientformerv2} & 2.56 G & 26.1 M& 83.3\%\\
+T2T-ViT-14~\cite{yuan2021tokens} & 4.8 G & 21.5 M& 80.5\%\\
+CSwin-T~\cite{dong2022cswin} & 4.3 G & 23 M& 82.7\%\\
+YOLO-v11~\cite{yolo11} & 2.5 G & 10.4 M& 77.3\%\\
+GMorph~\cite{yang2024gmorph} & 11.31 G & 133.05 M& 71.7\%\\
+%\midrule
+\name & 1.25 G & 5.7 M & \textbf{83.59\%}\\
+\bottomrule
+\end{tabular}
+}
+\end{adjustbox}
+\vspace{-10pt}
+\label{tab:imagenet_classification}
+\end{table}
+
+
+% \subsection{CIFAR 10 results for Image Classification}
+% \label{sec:cifar10}
+\begin{table}%[h!]
+\centering
+%\captionsetup{font=small}
+%\begin{small}
+\caption{\small Classification performance on CIFAR10~\cite{cifar10}. ViT exhibits the highest computational cost with 1693 G MACs and 86 M parameters. \name achieves similar accuracy with only 1.25 G MACs and 5.75 M parameters, operating in the megascale (10\(^6\)), offering a substantial reduction in computational resources with minimal accuracy trade-off.}
+\begin{adjustbox}{max width=0.8\textwidth}{
+\begin{tabular}{lccc}
+\toprule
+\textbf{Method} & \textbf{MACs} & \textbf{Params} & \textbf{Accuracy}\\
+\midrule
+ViT~\cite{dosovitskiy2020image, cifar10Hugging} & 1693 G & 86 M & \textbf{95.29\%}\\
+LGViT~\cite{xu2023lgvit} & 10.65 G & 101 M & 92.5\%\\
+AdaptFormer~\cite{chen2022adaptformer} & 1.71 G & 87.6 M & 93.36\% \\
+EfficientViT~\cite{cai2023efficientvit} & \multirow{2}{*}{2.1 G} & \multirow{2}{*}{24 M} & \multirow{2}{*}{93.27\%}\\
+(finetuned on~\cite{efficientvit_b2_huggingface}) &&&\\
+\midrule
+\name & \textbf{1.25 G} & \textbf{5.75 M} & 93.44\%\\
+\bottomrule
+\end{tabular}
+}
+\end{adjustbox}
+
+%\vspace{-10pt}
+\label{tab:cifar10}
+\end{table}
+
+% --- Standard BibTeX Block ---
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

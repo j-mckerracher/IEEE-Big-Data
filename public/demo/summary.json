@@ -1,0 +1,38 @@
+{
+  "img_1": {
+    "high":    { "label": "dog", "confidence": 0.95 },
+    "medium":  { "label": "dog", "confidence": 0.88 },
+    "low":     { "label": "dog", "confidence": 0.53 },
+    "ssd": { "label": "horse", "confidence": 0.29 },
+    "original":    { "label": "dog", "confidence": 1.0 }
+
+  },
+
+  "img_2": {
+    "high":    { "label": "bench", "confidence": 0.92 },
+    "medium":  { "label": "bench", "confidence": 0.77 },
+    "low":     { "label": "bench", "confidence": 0.46 },
+    "ssd": { "label": "donut", "confidence": 0.99 },
+    "original":    { "label": "bench", "confidence": 1.0 }
+
+  },
+
+  "img_3": {
+    "high":    { "label": "plate", "confidence": 0.85 },
+    "medium":  { "label": "plate", "confidence": 0.63 },
+    "low":     { "label": "spoon", "confidence": 0.72 },
+    "ssd": { "label": "chair", "confidence": 0.67 },
+    "original":    { "label": "plate", "confidence": 1.0 }
+
+  },
+
+  "img_4": {
+    "high":    { "label": "shoe", "confidence": 0.75 },
+    "medium":  { "label": "shoe", "confidence": 0.65 },
+    "low":     { "label": "shoe", "confidence": 0.52 },
+    "ssd": { "label": "bicycle", "confidence": 0.58 },
+    "original":    { "label": "shoe", "confidence": 1.0 }
+
+  }
+
+}

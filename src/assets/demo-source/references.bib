@@ -1,0 +1,673 @@
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkh{\"a}user" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+@incollection{Bengio+chapter2007,
+author = {Bengio, Yoshua and LeCun, Yann},
+booktitle = {Large Scale Kernel Machines},
+publisher = {MIT Press},
+title = {Scaling Learning Algorithms Towards {AI}},
+year = {2007}
+}
+
+@article{Hinton06,
+author = {Hinton, Geoffrey E. and Osindero, Simon and Teh, Yee Whye},
+journal = {Neural Computation},
+pages = {1527--1554},
+title = {A Fast Learning Algorithm for Deep Belief Nets},
+volume = {18},
+year = {2006}
+}
+
+@book{goodfellow2016deep,
+title={Deep learning},
+author={Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron and Bengio, Yoshua},
+volume={1},
+year={2016},
+publisher={MIT Press}
+}
+
+@misc{Authors14,
+ author = {FirstName LastName},
+ title = {The frobnicatable foo filter},
+ note = {Face and Gesture submission ID 324. Supplied as supplemental material {\tt fg324.pdf}},
+ year = 2014
+}
+
+@misc{Authors14b,
+ author = {FirstName LastName},
+ title = {Frobnication tutorial},
+ note = {Supplied as supplemental material {\tt tr.pdf}},
+ year = 2014
+}
+
+@article{Alpher02,
+author = {FirstName Alpher},
+title = {Frobnication},
+journal = PAMI,
+volume = 12,
+number = 1,
+pages = {234--778},
+year = 2002
+}
+
+@article{Alpher03,
+author = {FirstName Alpher and  FirstName Fotheringham-Smythe},
+title = {Frobnication revisited},
+journal = {Journal of Foo},
+volume = 13,
+number = 1,
+pages = {234--778},
+year = 2003
+}
+
+@article{Alpher04,
+author = {FirstName Alpher and FirstName Fotheringham-Smythe and FirstName Gamow},
+title = {Can a machine frobnicate?},
+journal = {Journal of Foo},
+volume = 14,
+number = 1,
+pages = {234--778},
+year = 2004
+}
+
+@inproceedings{Alpher05,
+author = {FirstName Alpher and FirstName Gamow},
+title = {Can a computer frobnicate?},
+booktitle = ICCV,
+pages = {234--778},
+year = 2005
+}
+@misc{coco_eval,
+author = {COCO},
+  howpublished = {\url{https://cocodataset.org/#detection-eval}}
+}
+
+@inproceedings{lin2014microsoft,
+  title={Microsoft coco: Common objects in context},
+  author={Lin, Tsung-Yi and Maire, Michael and Belongie, Serge and Hays, James and Perona, Pietro and Ramanan, Deva and Doll{\'a}r, Piotr and Zitnick, C Lawrence},
+  booktitle={European conference on computer vision},
+  pages={740--755},
+  year={2014},
+  organization={Springer}
+}
+@inproceedings{dosovitskiy2020image,
+  author       = {Alexey Dosovitskiy and
+                  Lucas Beyer and
+                  Alexander Kolesnikov and
+                  Dirk Weissenborn and
+                  Xiaohua Zhai and
+                  Thomas Unterthiner and
+                  Mostafa Dehghani and
+                  Matthias Minderer and
+                  Georg Heigold and
+                  Sylvain Gelly and
+                  Jakob Uszkoreit and
+                  Neil Houlsby},
+  title        = {An Image is Worth 16x16 Words: Transformers for Image Recognition
+                  at Scale},
+  booktitle    = {9th International Conference on Learning Representations, {ICLR} 2021,
+                  Virtual Event, Austria, May 3-7, 2021},
+  publisher    = {OpenReview.net},
+  year         = {2021},
+  url          = {https://openreview.net/forum?id=YicbFdNTTy},
+  timestamp    = {Wed, 23 Jun 2021 17:36:39 +0200},
+  biburl       = {https://dblp.org/rec/conf/iclr/DosovitskiyB0WZ21.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{detr,
+author = {Carion, Nicolas and Massa, Francisco and Synnaeve, Gabriel and Usunier, Nicolas and Kirillov, Alexander and Zagoruyko, Sergey},
+title = {End-to-End Object Detection with Transformers},
+year = {2020},
+isbn = {978-3-030-58451-1},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-030-58452-8_13},
+doi = {10.1007/978-3-030-58452-8_13},
+abstract = {We present a new method that views object detection as a direct set prediction problem. Our approach streamlines the detection pipeline, effectively removing the need for many hand-designed components like a non-maximum suppression procedure or anchor generation that explicitly encode our prior knowledge about the task. The main ingredients of the new framework, called DEtection TRansformer or DETR, are a set-based global loss that forces unique predictions via bipartite matching, and a transformer encoder-decoder architecture. Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel. The new model is conceptually simple and does not require a specialized library, unlike many other modern detectors. DETR demonstrates accuracy and run-time performance on par with the well-established and highly-optimized Faster R-CNN baseline on the challenging COCO object detection dataset. Moreover, DETR can be easily generalized to produce panoptic segmentation in a unified manner. We show that it significantly outperforms competitive baselines. Training code and pretrained models are available at .},
+booktitle = {Computer Vision – ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part I},
+pages = {213–229},
+numpages = {17},
+location = {Glasgow, United Kingdom}
+}
+
+@inproceedings{zong2023detrs,
+  title={Detrs with collaborative hybrid assignments training},
+  author={Zong, Zhuofan and Song, Guanglu and Liu, Yu},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={6748--6758},
+  year={2023}
+}
+
+
+@inproceedings{lin2017focal,
+  title={Focal loss for dense object detection},
+  author={Lin, Tsung-Yi and Goyal, Priya and Girshick, Ross and He, Kaiming and Doll{\'a}r, Piotr},
+  booktitle={Proceedings of the IEEE international conference on computer vision},
+  pages={2980--2988},
+  year={2017}
+}
+@misc{pytorchvision_retinanet,
+  author = {{PyTorch Vision Contributors}},
+  title = {RetinaNet (torchvision.models.retinanet)},
+   howpublished = {\url{https://pytorch.org/vision/0.20/models/retinanet.html}},
+}
+
+@inproceedings{fcos,
+  title={Fcos: Fully convolutional one-stage object detection},
+  author={Tian, Zhi and Shen, Chunhua and Chen, Hao and He, Tong},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={9627--9636},
+  year={2019}
+}
+
+@inproceedings{he2017mask,
+  title={Mask r-cnn},
+  author={He, Kaiming and Gkioxari, Georgia and Doll{\'a}r, Piotr and Girshick, Ross},
+  booktitle={Proceedings of the IEEE international conference on computer vision},
+  pages={2961--2969},
+  year={2017}
+}
+
+@inproceedings{dong2022cswin,
+  title={Cswin transformer: A general vision transformer backbone with cross-shaped windows},
+  author={Dong, Xiaoyi and Bao, Jianmin and Chen, Dongdong and Zhang, Weiming and Yu, Nenghai and Yuan, Lu and Chen, Dong and Guo, Baining},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={12124--12134},
+  year={2022}
+}
+
+@article{ren2015faster,
+  title={Faster r-cnn: Towards real-time object detection with region proposal networks},
+  author={Ren, Shaoqing and He, Kaiming and Girshick, Ross and Sun, Jian},
+  journal={Advances in neural information processing systems},
+  volume={28},
+  year={2015}
+}
+
+@misc{fasterrcnn,
+  author = {PyTorch Vision Contributors},
+  title = {Torchvision Fasterrcnn - Mobilenet\_v3\_large\_320\_fpn},
+  howpublished = {\url{https://pytorch.org/vision/0.20/models/generated/torchvision.models.detection.fasterrcnn_mobilenet_v3_large_320_fpn.html}},
+  year = {2023}
+}
+
+@inproceedings{mobilenet,
+  title={Searching for mobilenetv3},
+  author={Howard, Andrew and Sandler, Mark and Chu, Grace and Chen, Liang-Chieh and Chen, Bo and Tan, Mingxing and Wang, Weijun and Zhu, Yukun and Pang, Ruoming and Vasudevan, Vijay and others},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={1314--1324},
+  year={2019}
+}
+
+@inproceedings{rtdetr,
+  title={Detrs beat yolos on real-time object detection},
+  author={Zhao, Yian and Lv, Wenyu and Xu, Shangliang and Wei, Jinman and Wang, Guanzhong and Dang, Qingqing and Liu, Yi and Chen, Jie},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={16965--16974},
+  year={2024}
+}
+
+@article{rtdetrv2,
+  title={RT-DETRv2: Improved Baseline with Bag-of-Freebies for Real-Time Detection Transformer},
+  author={Lv, Wenyu and Zhao, Yian and Chang, Qinyao and Huang, Kui and Wang, Guanzhong and Liu, Yi},
+  journal={CoRR},
+  year={2024}
+}
+
+@inproceedings{yolo,
+  title={You only look once: Unified, real-time object detection},
+  author={Redmon, Joseph and Divvala, Santosh and Girshick, Ross and Farhadi, Ali},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={779--788},
+  year={2016}
+}
+@software{yolo_v8,
+  author = {Glenn Jocher and Ayush Chaurasia and Jing Qiu},
+  title = {Ultralytics YOLOv8},
+  version = {8.0.0},
+  year = {2023},
+  howpublished = {\url{https://github.com/ultralytics/ultralytics}},
+  orcid = {0000-0001-5950-6979, 0000-0002-7603-6750, 0000-0003-3783-7069},
+  license = {AGPL-3.0}
+}
+
+
+@article{YOLOS,
+  title={You only look at one sequence: Rethinking transformer in vision through object detection},
+  author={Fang, Yuxin and Liao, Bencheng and Wang, Xinggang and Fang, Jiemin and Qi, Jiyang and Wu, Rui and Niu, Jianwei and Liu, Wenyu},
+  journal={Advances in Neural Information Processing Systems},
+  volume={34},
+  pages={26183--26197},
+  year={2021}
+}
+
+
+@misc{yolos_tiny,
+  author = {HUST-VL},
+  title = {YOLOS-tiny},
+  year = {2021},
+  publisher = {Hugging Face},
+  journal = {Hugging Face Model Hub},
+  howpublished = {\url{https://huggingface.co/hustvl/yolos-tiny}}
+}
+
+@article{yolo12,
+  title={YOLOv12: Attention-Centric Real-Time Object Detectors},
+  author={Tian, Yunjie and Ye, Qixiang and Doermann, David},
+  journal={arXiv preprint arXiv:2502.12524},
+  year={2025}
+}
+
+@inproceedings{tan2020efficientdet,
+  title={Efficientdet: Scalable and efficient object detection},
+  author={Tan, Mingxing and Pang, Ruoming and Le, Quoc V},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={10781--10790},
+  year={2020}
+}
+
+@inproceedings{liu2016ssd,
+  title={Ssd: Single shot multibox detector},
+  author={Liu, Wei and Anguelov, Dragomir and Erhan, Dumitru and Szegedy, Christian and Reed, Scott and Fu, Cheng-Yang and Berg, Alexander C},
+  booktitle={Computer Vision--ECCV 2016: 14th European Conference, Amsterdam, The Netherlands, October 11--14, 2016, Proceedings, Part I 14},
+  pages={21--37},
+  year={2016},
+  organization={Springer}
+}
+
+@misc{torchvision_ssd,
+  author = {PyTorch Vision Contributors},
+  title = {torchvision.models.detection.ssdlite320\_mobilenet\_v3\_large},
+  howpublished = {\url{https://pytorch.org/vision/master/models/generated/torchvision.models.detection.ssdlite320_mobilenet_v3_large.html}},
+  year = {2024}
+}
+
+@inproceedings{tan2019efficientnet,
+  title={Efficientnet: Rethinking model scaling for convolutional neural networks},
+  author={Tan, Mingxing and Le, Quoc},
+  booktitle={International conference on machine learning},
+  pages={6105--6114},
+  year={2019},
+  organization={PMLR}
+}
+
+@inproceedings{ghiasi2021simple,
+  title={Simple copy-paste is a strong data augmentation method for instance segmentation},
+  author={Ghiasi, Golnaz and Cui, Yin and Srinivas, Aravind and Qian, Rui and Lin, Tsung-Yi and Cubuk, Ekin D and Le, Quoc V and Zoph, Barret},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={2918--2928},
+  year={2021}
+}
+
+@misc{voc_faster_rcnn,
+  author = {Hsu, Potter},
+  title = {easy-faster-rcnn pytorch},
+  howpublished = {\url{https://github.com/potterhsu/easy-faster-rcnn.pytorch}},
+}
+
+@inproceedings{imagenet,
+  title={Imagenet: A large-scale hierarchical image database},
+  author={Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Li, Kai and Fei-Fei, Li},
+  booktitle={2009 IEEE conference on computer vision and pattern recognition},
+  pages={248--255},
+  year={2009},
+  organization={Ieee}
+}
+
+@inproceedings{xu2023lgvit,
+  title={Lgvit: Dynamic early exiting for accelerating vision transformer},
+  author={Xu, Guanyu and Hao, Jiawei and Shen, Li and Hu, Han and Luo, Yong and Lin, Hui and Shen, Jialie},
+  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
+  pages={9103--9114},
+  year={2023}
+}
+
+@article{chen2022adaptformer,
+  title={Adaptformer: Adapting vision transformers for scalable visual recognition},
+  author={Chen, Shoufa and Ge, Chongjian and Tong, Zhan and Wang, Jiangliu and Song, Yibing and Wang, Jue and Luo, Ping},
+  journal={Advances in Neural Information Processing Systems},
+  volume={35},
+  pages={16664--16678},
+  year={2022}
+}
+
+
+@misc{efficientvit-b2-cls-huggingface,
+    author       = {Qualcomm AI Research},
+    title        = {efficientvit-b2-cls},
+    howpublished = {\url{https://huggingface.co/qualcomm/EfficientViT-b2-cls}},
+    publisher    = {Hugging Face},
+    year         = {2023},  
+    note         = {Pre-trained EfficientViT-B2 model for image classification from Qualcomm AI Research},
+}
+
+@article{steiner2021augreg,
+  title={How to train your ViT? Data, Augmentation, and Regularization in Vision Transformers},
+  author={Andreas Steiner and Alexander Kolesnikov and Xiaohua Zhai and Ross Wightman and Jakob Uszkoreit and Lucas Beyer},
+  journal={Trans. Mach. Learn. Res.},
+  year={2021},
+  volume={2022},
+  url={https://api.semanticscholar.org/CorpusID:235485156}
+}
+
+
+@misc{efficientvit-l2-cls-huggingface,
+    author       = {Qualcomm AI Research},
+    title        = {efficientvit-l2-cls},
+    howpublished = {\url{https://huggingface.co/qualcomm/EfficientViT-l2-cls}},
+    publisher    = {Hugging Face},
+    year         = {2023},  
+    note         = {Pre-trained EfficientViT-L2 model for image classification from Qualcomm AI Research},
+}
+
+
+@Article{pascal,
+   author = "Everingham, M. and Eslami, S. M. A. and Van~Gool, L. and Williams, C. K. I. and Winn, J. and Zisserman, A.",
+   title = "The Pascal Visual Object Classes Challenge: A Retrospective",
+   journal = "International Journal of Computer Vision",
+   volume = "111",
+   year = "2015",
+   number = "1",
+   month = jan,
+   pages = "98--136",
+}
+
+
+@inproceedings{cai2023efficientvit,
+  title={Efficientvit: Lightweight multi-scale attention for high-resolution dense prediction},
+  author={Cai, Han and Li, Junyan and Hu, Muyan and Gan, Chuang and Han, Song},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={17302--17313},
+  year={2023}
+}
+
+@inproceedings{qin2404mobilenetv4,
+  title={MobileNetV4: universal models for the mobile ecosystem},
+  author={Qin, Danfeng and Leichner, Chas and Delakis, Manolis and Fornoni, Marco and Luo, Shixin and Yang, Fan and Wang, Weijun and Banbury, Colby and Ye, Chengxi and Akin, Berkin and others},
+  booktitle={European Conference on Computer Vision},
+  pages={78--96},
+  year={2024},
+  organization={Springer}
+}
+
+@inproceedings{liu2022convnet,
+  title={A convnet for the 2020s},
+  author={Liu, Zhuang and Mao, Hanzi and Wu, Chao-Yuan and Feichtenhofer, Christoph and Darrell, Trevor and Xie, Saining},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={11976--11986},
+  year={2022}
+}
+
+@inproceedings{wang2021pyramid,
+  title={Pyramid vision transformer: A versatile backbone for dense prediction without convolutions},
+  author={Wang, Wenhai and Xie, Enze and Li, Xiang and Fan, Deng-Ping and Song, Kaitao and Liang, Ding and Lu, Tong and Luo, Ping and Shao, Ling},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={568--578},
+  year={2021}
+}
+@misc{huggingface_pvt_docs,
+  author = {Hugging Face Team},
+  title = {PVT (Pyramid Vision Transformer)},
+  howpublished = {\url{https://huggingface.co/docs/transformers/en/model_doc/pvt}},
+}
+
+@article{
+mehta2023separable,
+title={Separable Self-attention for Mobile Vision Transformers},
+author={Sachin Mehta and Mohammad Rastegari},
+journal={Transactions on Machine Learning Research},
+issn={2835-8856},
+year={2023},
+url={https://openreview.net/forum?id=tBl4yBEjKi},
+note={}
+}
+
+@article{li2022efficientformer,
+  title={Efficientformer: Vision transformers at mobilenet speed},
+  author={Li, Yanyu and Yuan, Geng and Wen, Yang and Hu, Ju and Evangelidis, Georgios and Tulyakov, Sergey and Wang, Yanzhi and Ren, Jian},
+  journal={Advances in Neural Information Processing Systems},
+  volume={35},
+  pages={12934--12949},
+  year={2022}
+}
+
+@inproceedings{efficientformerv2,
+  title={Rethinking Vision Transformers for MobileNet Size and Speed},
+  author={Li, Yanyu and Hu, Ju and Wen, Yang and Evangelidis, Georgios and Salahi, Kamyar and Wang, Yanzhi and Tulyakov, Sergey and Ren, Jian},
+  booktitle={Proceedings of the IEEE international conference on computer vision},
+  year={2023}
+}
+
+@inproceedings{yuan2021tokens,
+  title={Tokens-to-token vit: Training vision transformers from scratch on imagenet},
+  author={Yuan, Li and Chen, Yunpeng and Wang, Tao and Yu, Weihao and Shi, Yujun and Jiang, Zi-Hang and Tay, Francis EH and Feng, Jiashi and Yan, Shuicheng},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={558--567},
+  year={2021}
+}
+
+@software{yolo11,
+  author = {Glenn Jocher and Jing Qiu},
+  title = {Ultralytics YOLO11},
+  version = {11.0.0},
+  year = {2024},
+  url = {https://github.com/ultralytics/ultralytics},
+  orcid = {0000-0001-5950-6979, 0000-0003-3783-7069},
+  license = {AGPL-3.0}
+}
+
+@inproceedings{yang2024gmorph,
+  title={GMorph: Accelerating multi-dnn inference via model fusion},
+  author={Yang, Qizheng and Yang, Tianyi and Xiang, Mingcan and Zhang, Lijun and Wang, Haoliang and Serafini, Marco and Guan, Hui},
+  booktitle={Proceedings of the Nineteenth European Conference on Computer Systems},
+  pages={505--523},
+  year={2024}
+}
+
+@misc{cifar10Hugging,
+	author = {},
+	title = {CIFAR 10 weights},
+	howpublished = {\url{https://huggingface.co/nateraw/vit-base-patch16-224-cifar10}}
+}
+
+@misc{efficientvit_b2_huggingface,
+  author = {Ross Wightman},
+  title = {efficientvit\_b2.r256\_in1k},
+  publisher = {Hugging Face},
+  year = {2023},
+  howpublished = {\url{https://huggingface.co/timm/efficientvit_b2.r256_in1k}}
+}

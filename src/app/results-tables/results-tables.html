@@ -1,0 +1,48 @@
+<section id="tables" class="results">
+  <div class="results__inner">
+    <h2>Results Tables</h2>
+    <p class="results__intro">
+      Full comparison tables referenced from the paper.
+    </p>
+
+    @for (table of tables; track table.id) {
+      <article class="table-card">
+        <h3>{{ table.caption }}</h3>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>MACs</th>
+                <th># of Params</th>
+                <th>{{ table.metricLabel }}</th>
+              </tr>
+            </thead>
+            @for (section of table.sections; track section.heading) {
+              <tbody>
+                @if (section.heading) {
+                  <tr class="section-row">
+                    <td colspan="4">{{ section.heading }}</td>
+                  </tr>
+                }
+                @for (row of section.rows; track row.method + row.metric) {
+                  <tr [class.highlight-row]="row.highlight">
+                    <td>
+                      {{ row.method }}
+                      @if (row.sub) {
+                        <div class="row-sub">{{ row.sub }}</div>
+                      }
+                    </td>
+                    <td>{{ row.macs }}</td>
+                    <td>{{ row.params }}</td>
+                    <td>{{ row.metric }}</td>
+                  </tr>
+                }
+              </tbody>
+            }
+          </table>
+        </div>
+      </article>
+    }
+  </div>
+</section>

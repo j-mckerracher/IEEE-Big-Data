@@ -1,0 +1,27 @@
+<section id="references" class="refs">
+  <div class="refs__inner">
+    <h2>References</h2>
+    <p class="refs__intro">
+      Full bibliography for cited work, moved off the printed page to save space for results.
+    </p>
+
+    <ol class="refs__list">
+      @for (ref of references; track ref.key) {
+        <li>
+          @if (ref.author) {
+            <span class="ref-author">{{ ref.author }}.</span>
+          }
+          @if (ref.title) {
+            <span class="ref-title">{{ ref.title }}. </span>
+          }
+          @if (ref.venue) {
+            <span class="ref-venue">{{ ref.venue }}. </span>
+          }
+          @if (ref.year) {
+            <span class="ref-year">{{ ref.year }}.</span>
+          }
+        </li>
+      }
+    </ol>
+  </div>
+</section>
