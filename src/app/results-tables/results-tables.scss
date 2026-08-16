@@ -1,6 +1,6 @@
 .results {
   padding: 4rem 1.5rem;
-  background: #fff;
+  background: #1a1510;
 }
 
 .results__inner {
@@ -9,15 +9,16 @@
 }
 
 h2 {
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   font-size: 1.8rem;
   margin: 0 0 0.75rem;
-  color: #0b3d91;
+  color: #f5edd8;
 }
 
 .results__intro {
   max-width: 640px;
   line-height: 1.6;
-  color: #333;
+  color: rgba(245, 237, 216, 0.82);
   margin: 0 0 2.5rem;
 }
 
@@ -28,7 +29,7 @@ h2 {
 h3 {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #333;
+  color: #a8956e;
   line-height: 1.5;
   margin: 0 0 1rem;
 }
@@ -41,30 +42,32 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.88rem;
+  color: rgba(245, 237, 216, 0.9);
 }
 
 thead th {
   text-align: left;
-  border-top: 2px solid #1a1a1a;
-  border-bottom: 1px solid #1a1a1a;
+  border-top: 2px solid #c4862a;
+  border-bottom: 1px solid #c4862a;
   padding: 0.6rem 0.75rem;
   font-weight: 700;
   white-space: nowrap;
+  color: #f5edd8;
 }
 
 tbody:last-of-type tr:last-child td {
-  border-bottom: 2px solid #1a1a1a;
+  border-bottom: 2px solid #c4862a;
 }
 
 td {
   padding: 0.55rem 0.75rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(196, 134, 42, 0.18);
   vertical-align: top;
 }
 
 .row-sub {
   font-size: 0.78rem;
-  color: #777;
+  color: #7a6a4a;
 }
 
 .section-row td {
@@ -72,12 +75,12 @@ td {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #0b3d91;
-  background: #f2f5fb;
-  border-bottom: 1px solid #dde4f0;
+  color: #c4862a;
+  background: rgba(196, 134, 42, 0.1);
+  border-bottom: 1px solid rgba(196, 134, 42, 0.3);
 }
 
 .highlight-row td {
   font-weight: 700;
-  background: #fbf7e8;
+  background: rgba(196, 134, 42, 0.14);
 }
