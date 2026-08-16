@@ -1,13 +1,182 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>IeeeBigDataApp</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body>
-    <app-root></app-root>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>STRIDE — Museum of Detectors · IEEE Big Data 2026</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <style>
+    /* Museum theme for scroll-world */
+    :root, .sw-root {
+      --sw-bg: #1A1510;
+      --sw-ink: #F5EDD8;
+      --sw-ink-soft: #A8956E;
+      --sw-accent: #C4862A;
+      --sw-font-display: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      --sw-font-body: "Georgia", "Times New Roman", serif;
+    }
+    .sw-sky { background: #1A1510; }
+    .sw-copylayer::before {
+      background: linear-gradient(90deg,rgba(26,21,16,0.96) 0%,rgba(26,21,16,0.80) 32%,rgba(26,21,16,0.40) 60%,transparent 100%);
+    }
+    @media (max-width:860px) {
+      .sw-copylayer::before {
+        background: linear-gradient(0deg,rgba(26,21,16,0.95) 12%,rgba(26,21,16,0.70) 44%,transparent 100%);
+      }
+    }
+    .sw-scrollbar { background: rgba(196,134,42,0.12); }
+    .sw-scrollbar span { background: #C4862A; }
+    .sw-nav { background: rgba(26,21,16,0.72); border-color: rgba(196,134,42,0.22); backdrop-filter: blur(12px); }
+    .sw-nav__item { color: #A8956E; }
+    .sw-nav__item.is-active { background: #C4862A; color: #1A1510; }
+    .sw-topcta { background: #C4862A; color: #1A1510; font-weight: 700; }
+    .sw-route::before { background: #C4862A; opacity: 0.35; }
+    .sw-copy__tags li { color: #C4862A; background: rgba(196,134,42,0.12); border-color: rgba(196,134,42,0.32); }
+    .sw-btn--primary { background: #C4862A; color: #1A1510; }
+    .sw-btn--ghost { color: #F5EDD8; border-color: rgba(245,237,216,0.3); }
+    .sw-route__label { background: rgba(26,21,16,0.90); color: #F5EDD8; border-color: rgba(196,134,42,0.25); }
+    .sw-copy__num { color: #7A6A4A; }
+    .sw-copy__eyebrow { color: #C4862A; }
+    .sw-copy__title { color: #F5EDD8; }
+    .sw-copy__body { color: rgba(245,237,216,0.82); }
+
+    /* Hide museum overlays once user scrolls past the museum track */
+    #museum-world.sw-past .sw-sky,
+    #museum-world.sw-past .sw-topbar,
+    #museum-world.sw-past .sw-stage,
+    #museum-world.sw-past .sw-copylayer,
+    #museum-world.sw-past .sw-route,
+    #museum-world.sw-past .sw-hint,
+    #museum-world.sw-past .sw-scrollbar { display: none !important; }
+
+    /* Angular app sits above the museum background */
+    app-root { display: block; position: relative; z-index: 200; background: #fff; }
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div id="museum-world"></div>
+  <app-root></app-root>
+
+  <script src="/scrub-engine.js"></script>
+  <script>
+    mountScrollWorld(document.getElementById('museum-world'), {
+      brand: { name: 'Museum of Detectors', href: '#top' },
+      cta:   { label: 'Explore the Data', href: '#demo' },
+      hint:  'scroll to enter',
+      diveScroll: 1.4,
+      connScroll: 0.85,
+      crossfade: 0.14,
+
+      sections: [
+        {
+          id: 'entrance',
+          label: 'Grand Entrance',
+          still: '/museum/img/still_0.jpg',
+          clip:  '/museum/vid/dive_0.mp4',
+          accent: '#C4862A',
+          scroll: 1.6,
+          linger: 0.42,
+          eyebrow: 'Object Detection Today',
+          title: 'The Weight of Seeing.',
+          body: 'Modern detectors demand billions of operations per image — a computational debt paid on every frame.',
+          tags: ['88G–1,693G MACs/frame', 'COCO · PASCAL VOC · ImageNet'],
+        },
+        {
+          id: 'giants',
+          label: 'Hall of Giants',
+          still: '/museum/img/still_1.jpg',
+          clip:  '/museum/vid/dive_1.mp4',
+          accent: '#8B6914',
+          scroll: 1.3,
+          linger: 0.35,
+          eyebrow: 'Hall of Computation',
+          title: 'They work. At enormous cost.',
+          body: 'ViT needs 1,693G MACs and 86M parameters. Mask R-CNN demands 526G MACs. Co-DETR: 88G. The giants deliver — but at what price?',
+          tags: ['ViT: 1,693G MACs', 'Mask R-CNN: 526G MACs', 'Co-DETR: 88G MACs'],
+        },
+        {
+          id: 'efficiency',
+          label: 'Efficiency Era',
+          still: '/museum/img/still_2.jpg',
+          clip:  '/museum/vid/dive_2.mp4',
+          accent: '#A07030',
+          scroll: 1.2,
+          linger: 0.30,
+          eyebrow: 'The Efficiency Push',
+          title: 'Smaller. Faster. Still a trade-off.',
+          body: 'YOLO-v8s reaches 14.4G MACs, RT-DETRv2S 30G — but accuracy suffers under loose bounding boxes and coarse IoU regimes.',
+          tags: ['YOLO-v8s: 14.4G MACs', 'RT-DETRv2S: 30G MACs', '43–48% mAP'],
+        },
+        {
+          id: 'lab',
+          label: 'STRIDE Lab',
+          still: '/museum/img/still_3.jpg',
+          clip:  '/museum/vid/dive_3.mp4',
+          accent: '#D4982A',
+          scroll: 1.5,
+          linger: 0.45,
+          eyebrow: 'The STRIDE Method',
+          title: '685 million operations. No compromise.',
+          body: 'Core-Buffer patch strategy. 4.591M parameters. STRIDE routes each token only where it is needed — slashing compute without sacrificing precision.',
+          tags: ['685.18M MACs', '4.591M Parameters', 'Core-Buffer Patches'],
+        },
+        {
+          id: 'results',
+          label: 'Results Gallery',
+          still: '/museum/img/still_4.jpg',
+          clip:  '/museum/vid/dive_4.mp4',
+          accent: '#E8B840',
+          scroll: 1.6,
+          linger: 0.48,
+          eyebrow: 'Benchmark Results',
+          title: '93.49% mAP. Best in class.',
+          body: 'PASCAL VOC accurate boxes: STRIDE leads. ImageNet: 83.59% accuracy at 1.25G MACs — outperforming models 10–100× larger. CIFAR-10: 93.44%.',
+          tags: ['PASCAL VOC: 93.49% mAP', 'ImageNet: 83.59%', 'CIFAR-10: 93.44%'],
+        },
+        {
+          id: 'reading-room',
+          label: 'Reading Room',
+          still: '/museum/img/still_5.jpg',
+          clip:  '/museum/vid/dive_5.mp4',
+          accent: '#C4862A',
+          scroll: 1.8,
+          linger: 0.50,
+          eyebrow: 'IEEE Big Data 2026',
+          title: 'A new standard for efficient detection.',
+          body: 'STRIDE proves that a 685M MAC detector — smaller than a SSD baseline — can match or surpass models orders of magnitude larger, on every benchmark.',
+          tags: ['IEEE Big Data 2026'],
+          cta: {
+            primary:   { label: 'Explore the Data',  href: '#demo' },
+            secondary: { label: 'View Results Tables', href: '#tables' },
+          },
+        },
+      ],
+
+      connectors: [
+        '/museum/vid/conn_0.mp4',
+        '/museum/vid/conn_1.mp4',
+        '/museum/vid/conn_2.mp4',
+        '/museum/vid/conn_3.mp4',
+        '/museum/vid/conn_4.mp4',
+      ],
+    });
+
+    /* Hide museum overlays once user scrolls past the museum track */
+    (function () {
+      var world = document.getElementById('museum-world');
+      function checkPast() {
+        var track = world.querySelector('.sw-track');
+        if (!track) return;
+        var trackH = parseFloat(track.style.height) || 0;
+        world.classList.toggle('sw-past', window.scrollY >= trackH);
+      }
+      window.addEventListener('scroll', checkPast, { passive: true });
+      window.addEventListener('resize', checkPast);
+      /* Also check after Angular boots and might shift layout */
+      setTimeout(checkPast, 1000);
+    })();
+  </script>
+</body>
 </html>
