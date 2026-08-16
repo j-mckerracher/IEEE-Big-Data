@@ -1,6 +1,6 @@
 .results {
-  padding: 4rem 1.5rem;
-  background: #1a1510;
+  padding: clamp(3.5rem, 7vw, 6rem) 1.5rem;
+  background: var(--color-bg);
 }
 
 .results__inner {
@@ -9,16 +9,18 @@
 }
 
 h2 {
-  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-  font-size: 1.8rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  letter-spacing: -0.02em;
   margin: 0 0 0.75rem;
-  color: #f5edd8;
+  color: var(--color-text);
 }
 
 .results__intro {
   max-width: 640px;
   line-height: 1.6;
-  color: rgba(245, 237, 216, 0.82);
+  color: var(--color-text-soft);
   margin: 0 0 2.5rem;
 }
 
@@ -29,45 +31,43 @@ h2 {
 h3 {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #a8956e;
+  color: var(--color-text-soft);
   line-height: 1.5;
   margin: 0 0 1rem;
 }
 
 .table-scroll {
   overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.88rem;
-  color: rgba(245, 237, 216, 0.9);
+  color: var(--color-text);
 }
 
 thead th {
   text-align: left;
-  border-top: 2px solid #c4862a;
-  border-bottom: 1px solid #c4862a;
+  border-bottom: 1px solid var(--color-border);
   padding: 0.6rem 0.75rem;
   font-weight: 700;
   white-space: nowrap;
-  color: #f5edd8;
-}
-
-tbody:last-of-type tr:last-child td {
-  border-bottom: 2px solid #c4862a;
+  color: var(--color-text);
+  background: var(--color-bg-alt);
 }
 
 td {
   padding: 0.55rem 0.75rem;
-  border-bottom: 1px solid rgba(196, 134, 42, 0.18);
+  border-bottom: 1px solid var(--color-border);
   vertical-align: top;
 }
 
 .row-sub {
   font-size: 0.78rem;
-  color: #7a6a4a;
+  color: var(--color-text-soft);
 }
 
 .section-row td {
@@ -75,12 +75,11 @@ td {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #c4862a;
-  background: rgba(196, 134, 42, 0.1);
-  border-bottom: 1px solid rgba(196, 134, 42, 0.3);
+  color: var(--color-accent);
+  background: var(--color-bg-alt);
 }
 
 .highlight-row td {
   font-weight: 700;
-  background: rgba(196, 134, 42, 0.14);
+  background: rgba(196, 134, 42, 0.08);
 }
