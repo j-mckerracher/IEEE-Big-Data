@@ -8,6 +8,14 @@
   --color-accent: #c4862a;
   --color-border: #d2d2d7;
   --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+
+  --console-bg: #0a0e14;
+  --console-border: #22262f;
+  --console-text: #e4e6eb;
+  --console-text-soft: #7c8494;
+  --console-ok: #34d399;
+  --console-err: #f87171;
 }
 
 * {

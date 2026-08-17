@@ -16,41 +16,60 @@
           (click)="selectImage(img.id)"
         >
           <img [src]="img.levels.original.src" [alt]="img.title" />
-          <span>{{ img.title }}</span>
+          <span class="thumb__id">{{ img.id }}</span>
+          <span class="thumb__label">{{ img.title }}</span>
         </button>
       }
     </div>
 
     <div class="comparison__stage">
-      <div class="comparison__display">
-        <img [src]="currentLevelData().src" [alt]="selectedImage().title + ' at ' + selectedLevel() + ' memory'" />
+      <div class="stage__console">
+        <span class="console__status" [class.console__status--ok]="isCorrect()" [class.console__status--err]="!isCorrect()"></span>
+        <span class="console__path">stride/compression-demo/{{ selectedImage().id }}/{{ selectedLevel() }}</span>
+        <span class="console__result" [class.console__result--ok]="isCorrect()" [class.console__result--err]="!isCorrect()">
+          {{ isCorrect() ? 'MATCH' : 'MISMATCH' }}
+        </span>
       </div>
 
-      <div class="comparison__panel">
-        <div class="comparison__levels">
-          @for (level of levels; track level.id) {
-            <button
-              type="button"
-              class="level-btn"
-              [class.level-btn--active]="level.id === selectedLevel()"
-              (click)="selectLevel(level.id)"
-            >
-              {{ level.label }}
-            </button>
-          }
+      <div class="stage__body">
+        <div class="comparison__display">
+          <img [src]="currentLevelData().src" [alt]="selectedImage().title + ' at ' + selectedLevel() + ' memory'" />
         </div>
 
-        <p class="comparison__blurb">
-          {{ levels.find(l => l.id === selectedLevel())?.blurb }}
-        </p>
+        <div class="comparison__panel">
+          <div class="comparison__levels">
+            @for (level of levels; track level.id) {
+              <button
+                type="button"
+                class="level-btn"
+                [class.level-btn--active]="level.id === selectedLevel()"
+                (click)="selectLevel(level.id)"
+              >
+                {{ level.label }}
+              </button>
+            }
+          </div>
 
-        <div class="comparison__result" [class.comparison__result--wrong]="!isCorrect()">
-          <span class="comparison__result-label">Prediction</span>
-          <span class="comparison__result-value">{{ currentLevelData().result.label }}</span>
-          <span class="comparison__result-confidence">
-            {{ (currentLevelData().result.confidence * 100) | number: '1.0-0' }}% confidence
-          </span>
-          <span class="comparison__result-truth">Ground truth: {{ selectedImage().groundTruth }}</span>
+          <p class="comparison__blurb">
+            {{ levels.find(l => l.id === selectedLevel())?.blurb }}
+          </p>
+
+          <div class="comparison__result" [class.comparison__result--wrong]="!isCorrect()">
+            <div class="result__row">
+              <span class="result__label">Prediction</span>
+              <span class="result__value">{{ currentLevelData().result.label }}</span>
+            </div>
+            <div class="result__row">
+              <span class="result__label">Confidence</span>
+              <span class="result__value result__value--metric">
+                {{ (currentLevelData().result.confidence * 100) | number: '1.0-0' }}%
+              </span>
+            </div>
+            <div class="result__row">
+              <span class="result__label">Ground truth</span>
+              <span class="result__value result__value--muted">{{ selectedImage().groundTruth }}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
