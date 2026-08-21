@@ -29,6 +29,13 @@
                   <tr [class.highlight-row]="row.highlight">
                     <td>
                       {{ row.method }}
+                      @if (row.refs) {
+                        <sup class="row-refs">
+                          [@for (key of row.refs; track key; let last = $last) {
+                            <a [href]="'#ref-' + key">{{ refNumber(key) }}</a>@if (!last) {<span>,&nbsp;</span>}
+                          }]
+                        </sup>
+                      }
                       @if (row.sub) {
                         <div class="row-sub">{{ row.sub }}</div>
                       }
