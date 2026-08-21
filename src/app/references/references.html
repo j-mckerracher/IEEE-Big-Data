@@ -7,7 +7,7 @@
 
     <ol class="refs__list">
       @for (ref of references; track ref.key) {
-        <li>
+        <li [id]="'ref-' + ref.key">
           @if (ref.author) {
             <span class="ref-author">{{ ref.author }}.</span>
           }

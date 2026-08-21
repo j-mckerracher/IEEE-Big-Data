@@ -1,5 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f5f7;
+  --color-text: #1d1d1f;
+  --color-text-soft: #6e6e73;
+  --color-accent: #c4862a;
+  --color-border: #d2d2d7;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+
+  --console-bg: #0a0e14;
+  --console-border: #22262f;
+  --console-text: #e4e6eb;
+  --console-text-soft: #7c8494;
+  --console-ok: #34d399;
+  --console-err: #f87171;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,7 +28,8 @@ html {
 
 body {
   margin: 0;
-  font-family: Georgia, 'Times New Roman', serif;
-  background: #1a1510;
-  color: #f5edd8;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
 }
